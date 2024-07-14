@@ -24,7 +24,7 @@ let initialized = false;
 // get time in seconds since beginning of the day (so that all windows use the same time)
 function getTime ()
 {
-	return (new Date().getTime() - today) / 1000.0;
+	return (new Date().getTime() - today) / 100.0;
 }
 
 
@@ -153,7 +153,7 @@ else
 
 
 		// calculate the new position based on the delta between current offset and new offset times a falloff value (to create the nice smoothing effect)
-		let falloff = 10;
+		let falloff = 0.05;
 		sceneOffset.x = sceneOffset.x + ((sceneOffsetTarget.x - sceneOffset.x) * falloff);
 		sceneOffset.y = sceneOffset.y + ((sceneOffsetTarget.y - sceneOffset.y) * falloff);
 
