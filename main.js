@@ -153,7 +153,7 @@ else
 
 
 		// calculate the new position based on the delta between current offset and new offset times a falloff value (to create the nice smoothing effect)
-		let falloff = .05;
+		let falloff = 10;
 		sceneOffset.x = sceneOffset.x + ((sceneOffsetTarget.x - sceneOffset.x) * falloff);
 		sceneOffset.y = sceneOffset.y + ((sceneOffsetTarget.y - sceneOffset.y) * falloff);
 
